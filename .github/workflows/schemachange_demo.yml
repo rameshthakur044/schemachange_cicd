@@ -47,6 +47,6 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           echo “GITHUB WORKSPACE $GITHUB_WORKSPACE”
-          python –version
+          python --version
           echo “Step 1: Initializing Schemachange”
           pip install schemachange
