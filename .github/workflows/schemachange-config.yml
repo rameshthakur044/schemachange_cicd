@@ -34,7 +34,7 @@ jobs:
         
         name: Run schemachange
         env:
-          SNOWFLAKE_PASSWORD: Dharmik@1
+          SNOWFLAKE_PASSWORD: ${{ secrets.SF_PASSWORD }}
           SNOWFLAKE_ACCOUNT: ${{ secrets.SF_ACCOUNT }}
           SNOWFLAKE_USER: ${{ secrets.SF_USERNAME }}
           SNOWFLAKE_ROLE: ${{ secrets.SF_ROLE }}
