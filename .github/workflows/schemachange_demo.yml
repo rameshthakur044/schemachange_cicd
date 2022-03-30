@@ -47,6 +47,7 @@ jobs:
           echo "Add other actions to build $GITHUB_WORKSPACE/dbscript"
           echo test, and deploy your project.
           echo “GITHUB WORKSPACE $GITHUB_WORKSPACE”
+          echo “SNOWFLAKE_ACCOUNT is $SNOWFLAKE_ACCOUNT”
           python --version
           echo “Step 1: Initializing Schemachange”
           pip install schemachange
