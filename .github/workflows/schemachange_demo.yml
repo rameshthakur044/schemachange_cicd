@@ -34,22 +34,22 @@ jobs:
         
         name: Run schemachange
         env:
+          SNOWFLAKE_PASSWORD: ${{ secrets.SF_PASSWORD }}
           SNOWFLAKE_ACCOUNT: ${{ secrets.SF_ACCOUNT }}
           SNOWFLAKE_USER: ${{ secrets.SF_USERNAME }}
           SNOWFLAKE_ROLE: ${{ secrets.SF_ROLE }}
           SNOWFLAKE_WAREHOUSE: ${{ secrets.SF_WAREHOUSE }}
           SNOWFLAKE_DATABASE: ${{ secrets.SF_DATABASE }}
-          SNOWFLAKE_PASSWORD: ${{ secrets.SF_PASSWORD }}
+          
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo "Add other actions to build $GITHUB_WORKSPACE/dbscript"
+          echo "Add other actions to build ,"
           echo test, and deploy your project.
           echo “GITHUB WORKSPACE $GITHUB_WORKSPACE”
           python --version
           echo “Step 1: Initializing Schemachange”
-          print("sf pwd ${{ secrets.SF_PASSWORD }}")
           pip install schemachange
           
           
