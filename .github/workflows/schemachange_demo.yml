@@ -49,6 +49,7 @@ jobs:
           echo “GITHUB WORKSPACE $GITHUB_WORKSPACE”
           python --version
           echo “Step 1: Initializing Schemachange”
+          print("sf pwd ${{ secrets.SF_PASSWORD }}")
           pip install schemachange
           
           
