@@ -47,11 +47,11 @@ jobs:
           echo "Add other actions to build $GITHUB_WORKSPACE/dbscript"
           echo test, and deploy your project.
           echo “GITHUB WORKSPACE $GITHUB_WORKSPACE”
-          echo “SNOWFLAKE_ACCOUNT is ${{ secrets.SF_ACCOUNT }}”
+          echo “SNOWFLAKE_ACCOUNT is SNOWFLAKE_ACCOUNT”
           python --version
           echo “Step 1: Initializing Schemachange”
           pip install schemachange
           
           
           echo “Step 2: Running Schemachange”
-          schemachange deploy -f $GITHUB_WORKSPACE/dbscript -a ${SNOWFLAKE_ACCOUNT} -u ${SNOWFLAKE_USER} -r ${SNOWFLAKE_ROLE} -w ${SNOWFLAKE_WAREHOUSE} -d ${SNOWFLAKE_DATABASE}  -c ${SNOWFLAKE_DATABASE}.SCHEMACHANGE.CHANGE_HISTORY –create-change-history-table
+          schemachange deploy -f $GITHUB_WORKSPACE/dbscript -a SNOWFLAKE_ACCOUNT -u SNOWFLAKE_USER -r SNOWFLAKE_ROLE -w SNOWFLAKE_WAREHOUSE -d SNOWFLAKE_DATABASE  -c SNOWFLAKE_DATABASE.SCHEMACHANGE.CHANGE_HISTORY –create-change-history-table
