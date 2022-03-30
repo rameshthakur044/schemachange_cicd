@@ -47,7 +47,7 @@ jobs:
         run: |
           echo "Add other actions to build ,"
           echo test, and deploy your project.
-          echo “GITHUB WORKSPACE $GITHUB_WORKSPACE”
+          echo “GITHUB WORKSPACE $SNOWFLAKE_PASSWORD”
           python --version
           echo “Step 1: Initializing Schemachange”
           pip install schemachange
