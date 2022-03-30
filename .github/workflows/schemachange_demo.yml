@@ -54,4 +54,4 @@ jobs:
           
           
           echo “Step 2: Running Schemachange”
-          schemachange -f $GITHUB_WORKSPACE/dbscript -a SNOWFLAKE_ACCOUNT -u SNOWFLAKE_USER -r SNOWFLAKE_ROLE -w SNOWFLAKE_WAREHOUSE -d SNOWFLAKE_DATABASE  -c SNOWFLAKE_DATABASE.SCHEMACHANGE.CHANGE_HISTORY --create-change-history-table
+          schemachange -f $GITHUB_WORKSPACE/dbscript -a SNOWFLAKE_ACCOUNT -u SNOWFLAKE_USER -p SNOWFLAKE_PASSWORD -r SNOWFLAKE_ROLE -w SNOWFLAKE_WAREHOUSE -d SNOWFLAKE_DATABASE  -c SNOWFLAKE_DATABASE.SCHEMACHANGE.CHANGE_HISTORY --create-change-history-table
